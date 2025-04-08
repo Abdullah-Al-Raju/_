@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Abdullah Al Raju | Cybersecurity Portfolio</title>
+
+        <style>
+            :root {
+                --primary-color: #d31405; /* Red */
+                --secondary-color: #f0f0f1; /* Light Gray */
+                --background-dark: #000000; /* Black */
+                --text-color: #f0f0f1; /* Light Gray for text */
+            }
+
+            body {
+                background-color: var(--background-dark);
+                color: var(--text-color);
+            }
+
+            a {
+                text-decoration: none; /* Remove underline globally for all links */
+            }
+
+            .section-title {
+                position: relative;
+                display: block;
+                margin: 0 auto; /* Center horizontally */
+                text-align: center; /* Center text */
+                color: var(--primary-color);
+                opacity: 0; /* Start hidden */
+                transform: translateY(-50px); /* Start above */
+                animation: slide-in-top 1s ease-out forwards; /* Slide-in animation */
+            }
+
+            @keyframes slide-in-top {
+                to {
+                    opacity: 1;
+                    transform: translateY(0); /* End at original position */
+                }
+            }
+
+            .section {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center content horizontally */
+                justify-content: center; /* Center content vertically */
+                text-align: center;
+            }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 2px;
+                background-color: var(--primary-color); /* Change underline to red */
+                margin: 0.5rem auto; /* Center underline */
+            }
+
+            .nav__link {
+                color: var(--text-color);
+                transition: color 0.3s;
+            }
+
+            .nav__link:hover {
+                color: var(--primary-color);
+            }
+
+            .nav__link::after {
+                display: none; /* Ensure underline animation is removed */
+            }
+
+            .nav__link.active-link {
+                color: var(--primary-color);
+            }
+
+            .button {
+                background-color: var(--primary-color);
+                color: var(--text-color);
+            }
+
+            .button:hover {
+                background-color: var(--text-color);
+                color: var(--primary-color);
+            }
+
+            .home__title-color,
+            .section-title {
+                color: var(--primary-color);
+            }
+
+            .skills__bar {
+                background-color: var(--primary-color);
+            }
+
+            .footer {
+                background-color: var(--background-dark);
+                color: var(--text-color);
+            }
+
+            .footer__icon {
+                color: var(--text-color);
+            }
+
+            .footer__icon:hover {
+                color: var(--primary-color);
+            }
+
+            .home__social-icon i {
+                color: var (--text-color);
+            }
+
+            .home__social-icon i:hover {
+                color: var(--primary-color);
+            }
+
+            .skills__icon {
+                color: var(--primary-color);
+            }
+
+            .nav__logo-img {
+                filter: brightness(0) invert(1); /* Adjust logo for dark background */
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <img src="assets/img/logo.png" alt="Abdullah Al Raju Logo" class="nav__logo-img">
+                    </a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#certificate" class="nav__link">Certificate</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Abdullah Al Raju</span><br> Cybersecurity Pro</h1>
+
+                    <a href="#contact" class="button">Contact Me</a>
+                    <a href="assets/files/resume.pdf" class="button" download target="_blank">Download CV</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/abdullah-al-raju/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/this-is-raju" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="#d31405"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/Avater.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/Profile.png" alt="Abdullah Al Raju">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Abdullah Al Raju</h2>
+                        <p class="about__text">I’m Abdullah Al Raju, a passionate cybersecurity professional focused on ethical hacking and penetration testing. I’m currently a Penetration Testing Intern at Byte Capsule, where I apply hands-on techniques to identify and report real-world security vulnerabilities. I’m committed to continuous learning and helping organizations stay secure.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <p class="skills__text">Here are some of my core competencies in cybersecurity, honed through hands-on experience and continuous learning.</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-shield-alt-2 skills__icon'></i>
+                                <span class="skills__name">Web Penetration Testing</span>
+                            </div>
+                            <div class="skills__bar skills__web-pentest"></div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-search-alt skills__icon'></i>
+                                <span class="skills__name">Reconnaissance & OSINT</span>
+                            </div>
+                            <div class="skills__bar skills__osint"></div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-bug skills__icon'></i>
+                                <span class="skills__name">Bug Bounty Hunting</span>
+                            </div>
+                            <div class="skills__bar skills__bug-bounty"></div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-file skills__icon'></i>
+                                <span class="skills__name">Report Writing</span>
+                            </div>
+                            <div class="skills__bar skills__report"></div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/Skill.jpg" alt="Skills Image" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CERTIFICATE =====-->
+            <section class="certificate section" id="certificate">
+                <h2 class="section-title">Certificate</h2>
+
+                <div class="certificate__container bd-grid">
+                    <a href="#" class="certificate__item" target="_blank">
+                        <img src="assets/img/Certificate1.jpg" alt="Certificate 1" class="certificate__img">
+                        <p class="certificate__title">Certified Ethical Hacker</p>
+                    </a>
+                    <a href="#" class="certificate__item" target="_blank">
+                        <img src="assets/img/Certificate2.jpg" alt="Certificate 2" class="certificate__img">
+                        <p class="certificate__title">6 Months Training Program</p>
+                    </a>
+                </div>
+            </section>
+
+            <style>
+                .certificate__container {
+                    display: flex;
+                    justify-content: space-between; /* Space between images */
+                    align-items: center;
+                    gap: 2rem; /* Add gap between items */
+                    flex-wrap: wrap; /* Ensure responsiveness */
+                    margin-top: 2rem;
+                }
+
+                .certificate__item {
+                    flex: 1 1 calc(50% - 2rem); /* Two items per row with proper spacing */
+                    text-align: center;
+                }
+
+                .certificate__img {
+                    width: 100%;
+                    max-width: 400px; /* Limit image size */
+                    height: auto;
+                    border-radius: 8px; /* Add rounded corners */
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+                }
+
+                .certificate__title {
+                    margin-top: 1rem;
+                    font-size: 1.2rem;
+                    color: var(--text-color);
+                }
+            </style>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__email-box">
+                        <p class="contact__text">analystx.raju@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+
+            <style>
+                .contact__email-box {
+                    background-color: var(--primary-color); /* Red background */
+                    padding: 0.3rem 0.8rem; /* Adjust padding for a snug fit */
+                    border-radius: 6px; /* Rounded corners */
+                    text-align: center; /* Center the text */
+                    margin-top: 5rem; /* Increase space above the box */
+                    display: inline-block; /* Ensure the box wraps the content */
+                    max-width: fit-content; /* Fit the box to the content */
+                }
+
+                .contact__text {
+                    color: var(--text-color); /* Light text color */
+                    font-size: 1rem; /* Adjust font size */
+                    font-weight: bold; /* Make the text bold */
+                    word-wrap: break-word; /* Ensure text wraps if too long */
+                }
+            </style>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Abdullah Al Raju</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/abdullah-al-raju/" class="footer__icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/this-is-raju" class="footer__icon" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+            <p class="footer__copy">&#169; 2025 Abdullah Al Raju. All rights reserved.</p>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
